@@ -6,41 +6,34 @@ The adaption or distribution MUST be shared with the same licence as this file.
 
 THIS LICENCE DOES NOT GRANT YOU OWNERSHIP TO THIS FILE AND THE AUTHOR RESERVES THE RIGHT TO HAVE ANY ADAPTIONS OR DISTRIBUTIONS OF THIS FILE TAKEN DOWN. THIS LICENCE DOES NOT APPLY TO THE FILE'S ASSETS OR RESOURCES UNLESS STATED OTHERWISE. THIS LICENCE'S TERMS ALWAYS APPLY UNLESS EXPRESS PERMISSION FROM THE AUTHOR IS GIVEN. -->
 
-<html>
-
-<hea>
-<link rel="stylesheet" type="text/css" href="style%201.css">
-<a href="test%20area.html"><h1>image</h1></a>
-</hea>
+<!DOCTYPE html>
+<html lang="en-us">
 
 <body>
+<img src="https://lh3.googleusercontent.com/vY2EXEiN5dUcnMDWLaV26tpP30mpY2uWVKnJijIHu9VBgupggvaem2pf6eqDuZLEo5y6b4UXRbV6UaIYTC6r=w1280-h703-rw" id="hitter">
+<h1>Hit The Child</h1><br/>
+<button class="boxed" onclick="change()"><font size=20>hit him</font></button>
+    
+<script>
+var amount = 0
+function change() {
+    amount = amount + 1
+    document.getElementById("hitter").src = "https://lh5.googleusercontent.com/sjb8E7D4P5WpGeI8I7fYa0pZob03Sq_SmNWAI5ghpJIM7azdn_TNPyrSqjyU7yFwp9t5Dd5Xwn_MImkUGptV=w1280-h703-rw"
+    setTimeout(changeback, 300)
+    function changeback() {
+        document.getElementById("hitter").src= "https://lh3.googleusercontent.com/vY2EXEiN5dUcnMDWLaV26tpP30mpY2uWVKnJijIHu9VBgupggvaem2pf6eqDuZLEo5y6b4UXRbV6UaIYTC6r=w1280-h703-rw"
+    }
+    }
 
+</script>
 
 </body>
 
-<br/>
-<br/>
-<br/>
-<br/><br/>
-<br/>
-<br/>
-<br/><br/>
-<br/>
-<br/>
-<br/><br/>
-<br/>
-<br/>
-<br/><br/>
-<br/>
-<br/>
-<br/><br/>
-<br/>
-<br/>
-<br/>
-
-<footer>
-<a href="license.html">license</a>
-</footer>
-
-
+<style>
+.boxed {border: 2px solid black; width: 5cm; margin-top: 2cm}
+#hitter {
+width: 10cm; float: left;
+    }
+</style>
+   
 </html>
