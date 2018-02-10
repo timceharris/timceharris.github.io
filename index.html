@@ -12,37 +12,18 @@ THIS LICENCE DOES NOT GRANT YOU OWNERSHIP TO THIS FILE AND THE AUTHOR RESERVES T
 
 <body>
 <img src="https://lh3.googleusercontent.com/vY2EXEiN5dUcnMDWLaV26tpP30mpY2uWVKnJijIHu9VBgupggvaem2pf6eqDuZLEo5y6b4UXRbV6UaIYTC6r=w1280-h703-rw" id="hitter"><br/>
-<div id="myProgress">
-  <div id="myBar"></div>
-</div>
 <h1>Hit The Child With A Hammer</h1><br/>
 <button class="boxed" onclick="change()"><font size=20>Hit Him</font></button>
     
 <script>
 var amount = 0
 function change() {
-    move()
-    amount = amount + 1
     document.getElementById("hitter").src = "https://lh5.googleusercontent.com/sjb8E7D4P5WpGeI8I7fYa0pZob03Sq_SmNWAI5ghpJIM7azdn_TNPyrSqjyU7yFwp9t5Dd5Xwn_MImkUGptV=w1280-h703-rw"
     setTimeout(changeback, 300)
     function changeback() {
         document.getElementById("hitter").src= "https://lh3.googleusercontent.com/vY2EXEiN5dUcnMDWLaV26tpP30mpY2uWVKnJijIHu9VBgupggvaem2pf6eqDuZLEo5y6b4UXRbV6UaIYTC6r=w1280-h703-rw"
     }
     }
-
-function move() {
-    var elem = document.getElementById("myBar"); 
-    var width = 1;
-    var id = setInterval(frame, -10);
-    function frame() {
-        if (width >= 100) {
-            clearInterval(id);
-        } else {
-            width++; 
-            elem.style.width = width + '%'; 
-        }
-    }
-}
 
 </script>
 
