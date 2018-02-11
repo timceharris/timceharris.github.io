@@ -1,0 +1,133 @@
+<!--  © Copyright Timothy Harris
+
+The author grants permission, free of charge, for any person to distribute or adapt this file for any non-commercial use provided that appropriate credit - including a link to the original file, The title of the file, and the authors name - is given, and that it is subject to the following conditions:
+
+The adaption or distribution MUST be shared with the same licence as this file.
+
+THIS LICENCE DOES NOT GRANT YOU OWNERSHIP TO THIS FILE AND THE AUTHOR RESERVES THE RIGHT TO HAVE ANY ADAPTIONS OR DISTRIBUTIONS OF THIS FILE TAKEN DOWN. THIS LICENCE DOES NOT APPLY TO THE FILE'S ASSETS OR RESOURCES UNLESS STATED OTHERWISE. THIS LICENCE'S TERMS ALWAYS APPLY UNLESS EXPRESS PERMISSION FROM THE AUTHOR IS GIVEN. -->
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<audio id="soundtrack">  
+<source src='Hit%20the%20child%20with%20a%20hammer%20soundtrack.mp3' type="audio/mpeg">
+</audio>
+
+<body>
+<img src="hit%20the%20child%20with%20a%20hammer%201.png" id="hitter"><br/>
+<h1 id="thetitle">Hit The Child With A Hammer<font color="#00ce00" id="mv"> Musical version</font><br/><br/> Score: <score id="score">0</score><br/>Time: <timer id="timer">170</timer></h1><br/>
+<button class="boxed" onclick="delayofthething(), timer(), playmusic()" id="start"><font size=20>Start</font></button><button class="boxed" id="button" onclick="change()"><font size=20>Hit Him</font></button><button class="boxed" id="button2" onclick="change()"><font size=20>Hit Him</font></button><button class="boxed" id="button3" onclick="change()"><font size=20>Hit Him</font></button>
+
+<script>
+
+var amount = 0
+var turn = 0
+var time = 170
+
+
+function playmusic() {
+    document.getElementById("soundtrack").play()
+}
+
+function delayofthething() {
+    document.getElementById("start").style.display = "none"
+    turn = 0
+    document.getElementById("button").style.display = "none"
+    document.getElementById("button2").style.display = "none"
+    document.getElementById("button3").style.display = "none"
+    var mathrandom = (Math.floor((Math.random() * 5000) + 700))
+    turn = 1
+    setTimeout(visible, mathrandom)}
+
+function visible() {
+    var ids = ['button', 'button2', 'button3']
+    var chosenid = ids[Math.floor(Math.random() * ids.length)]
+    document.getElementById(chosenid).style.display = "inline"
+    var mathrandom = (1000)
+    setTimeout(delayofthething, mathrandom)
+}
+
+function timer() {
+    localStorage.setItem("score",amount)
+    if (time == 0) {window.location.assign("timerfinished.html")}
+    document.getElementById("timer").innerHTML = time
+        time = time - 1
+        setTimeout(timer, 500)}
+
+function change() {
+    amount = amount + 1
+    document.getElementById("score").innerHTML = amount
+    document.getElementById("hitter").src = "hit%20the%20child%20with%20a%20hammer%202.png"
+    setTimeout(changeback, 300)
+    function changeback() {
+        document.getElementById("hitter").src= "hit%20the%20child%20with%20a%20hammer%201.png"
+    }}
+
+</script>
+
+</body>
+
+<style>
+
+html {-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;}
+
+body {/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,63e1f2+50,1e5799+100&0+0,0.8+0,1+26,1+73,0.82+81,0.5+89,0.21+100 */
+background: -moz-linear-gradient(left, rgba(30,87,153,0.8) 0%, rgba(66,159,199,1) 26%, rgba(99,225,242,1) 50%, rgba(67,162,201,1) 73%, rgba(56,140,187,0.82) 81%, rgba(45,118,173,0.5) 89%, rgba(30,87,153,0.21) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, rgba(30,87,153,0.8) 0%,rgba(66,159,199,1) 26%,rgba(99,225,242,1) 50%,rgba(67,162,201,1) 73%,rgba(56,140,187,0.82) 81%,rgba(45,118,173,0.5) 89%,rgba(30,87,153,0.21) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, rgba(30,87,153,0.8) 0%,rgba(66,159,199,1) 26%,rgba(99,225,242,1) 50%,rgba(67,162,201,1) 73%,rgba(56,140,187,0.82) 81%,rgba(45,118,173,0.5) 89%,rgba(30,87,153,0.21) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc1e5799', endColorstr='#361e5799',GradientType=1 ); /* IE6-9 */}
+
+#button {display: none}
+
+#button2 {position: relative; left: 200px; display: none}
+
+#button3 {position: relative; left: 400px; display: none}
+
+#demo {float: right}
+    
+body {
+  height: 100%;
+}
+
+#mv {
+  -webkit-animation: background 0.5s cubic-bezier(1,0,0,1) infinite;
+  animation: background 0.5s cubic-bezier(1,0,0,1) infinite;  
+}
+
+
+@-webkit-keyframes background {
+  0% {color: #ff0000; }
+  33% {color: #00ff1d; }  
+  67% {color: #0000ff; }
+  100% {color: #ff0000; }
+}
+
+@keyframes background {
+  0% {color: #ff0000; }
+  33% {color: #00ff00; }  
+  67% {color: #0000ff; }
+  100% {color: #ff0000; }
+}
+
+.boxed {border: 2px solid black; width: 5cm; margin-top: 2cm}
+
+#hitter {
+width: 10cm; float: left;
+    }
+#myProgress {
+    width: 10cm;
+    background-color: grey;
+}
+#myBar {
+    width: 1%;
+    height: 30px;
+    background-color: green;
+}
+</style>
+   
+</html>
