@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html onload="ifmobile()" lang="en-us">
+
+<head>
+<!-- Mobile redirect script by https://pagecrafter.com -->
+<script type="text/javascript" src="js/redirection-mobile.js"></script><script type="text/javascript">// <![CDATA[
+ SA.redirection_mobile ({
+ mobile_url : "/Users/timothy/Documents/html files/school%20news/html/mobile.html",
+ });
+ 
+// ]]></script>
+<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+</head>
+
+<ul>
+  <li><a onmouseover="document.body.style.cursor = 'pointer'" onmouseout="document.body.style.cursor = 'default'" onclick="ScrollTo(document.getElementById('home'))">Home</a></li>
+  <li><a onmouseover="document.body.style.cursor = 'pointer'" onmouseout="document.body.style.cursor = 'default'" onclick="ScrollTo(document.getElementById('1'))">Poll</a></li>
+  <li><a onmouseover="document.body.style.cursor = 'pointer'" onmouseout="document.body.style.cursor = 'default'" onclick="ScrollTo(document.getElementById('2'))">2</a></li>
+  <li><a onmouseover="document.body.style.cursor = 'pointer'" onmouseout="document.body.style.cursor = 'default'" onclick="ScrollTo(document.getElementById('3'))">3</a></li>
+</ul>
+
+<div id="home" class="home">
+</div>
+
+<div id="1" class="white" onselectstart="return false">
+    <br/><br/>
+    <h1>Poll Title</h1>
+    <div class="row">
+    <div class="poll">
+    <div class="option"><box onmouseover="document.body.style.cursor = 'pointer'" onmouseout="document.body.style.cursor = 'default'">Option 1</box></div>
+    </div>
+    <div class="poll">
+    <div class="option"><box onmouseover="document.body.style.cursor = 'pointer'" onmouseout="document.body.style.cursor = 'default'">Option 2</box></div>
+    </div>
+    </div>
+    
+</div>
+<div id="2" class="grey">
+    <br/><br/>
+    <h1>Section 2</h1>
+    <h3>Proin egestas pellentesque nisi, in tristique velit lobortis sed. Mauris porttitor dolor et elementum imperdiet. Pellentesque vel molestie tellus. Phasellus semper lacinia arcu sed viverra. Vestibulum vitae varius odio. In vitae dui vel magna egestas efficitur et vel ante. Vestibulum vel nibh vulputate, elementum risus eu, consectetur tortor. Aliquam quam ante, accumsan eget viverra eu, tempor quis libero.
+    <br/><br/>
+    Fusce nibh nibh, egestas in fringilla vitae, vehicula eget mi. Nullam ut molestie justo, eget molestie sem. Nunc tincidunt eget sapien et mollis. Mauris in ex sit amet ante consectetur ultricies ac non urna. Sed pretium velit nec purus placerat, non volutpat justo iaculis. Curabitur eu egestas mauris, in imperdiet erat. Ut quis aliquam dui, ut iaculis mi. Integer ut turpis non dolor ultrices tempus. Integer vulputate placerat mauris. Ut efficitur lacus vel orci placerat consectetur. Duis vel sem in purus cursus varius nec non ex. Suspendisse malesuada aliquam libero, vel malesuada enim semper vitae.</h3><br/>
+</div>
+<div id="3" class="white">
+    <br/><br/>
+    <h1>Section 3</h1>
+    <h3>Aenean euismod nulla risus, ac pretium tortor tincidunt id. Nam vel ante ac dui consectetur placerat. Nam porta, risus eu sagittis lacinia, velit risus sagittis metus, vitae luctus orci mauris non libero. Sed felis neque, cursus a orci id, fringilla egestas magna. Donec quis ligula erat. Sed sagittis elit sollicitudin, porttitor urna sit amet, pulvinar sem. Vestibulum aliquet iaculis tempor. Quisque nec massa eget velit varius vehicula. Vivamus tempus libero a diam tristique, sodales bibendum ex viverra. Nam porttitor ultrices est, malesuada faucibus augue maximus sed. Morbi sed lorem enim. Suspendisse pulvinar eros ut feugiat placerat. Fusce non metus vitae velit fringilla tincidunt.
+    <br/><br/>
+    Pellentesque tristique purus suscipit sagittis maximus. In sit amet fringilla leo, ut dapibus lorem. Donec commodo laoreet risus, at tempus nibh vulputate id. Phasellus nec ante mattis, dignissim augue vel, laoreet quam. Nullam ac neque metus. Fusce non ultricies lectus, id congue elit. Donec quam odio, mattis sit amet tincidunt quis, mollis in est. Aliquam erat volutpat. Nulla consectetur, libero in mollis egestas, leo lorem condimentum lectus, eu semper velit arcu eget ante. Etiam ipsum purus, pretium eu finibus in, volutpat sit amet felis. Vestibulum dictum auctor laoreet. Nullam quam nibh, commodo ac ipsum et, dapibus consequat risus. Vestibulum ac libero aliquam, ullamcorper metus nec, suscipit arcu. Phasellus bibendum est a tellus molestie elementum. Nunc finibus sapien quis porttitor suscipit. Phasellus fermentum massa at arcu sollicitudin tempor.</h3><br/>
+</div>
+
+<script>
+
+
+function ifmobile() 
+    {while (true) {
+        if (screen.width <= 699) {
+    document.location = "mobile.html";}
+}}
+
+function ScrollTo(elemt) {
+window.scroll({
+  top: findPos(elemt), 
+  left: 0, 
+  behavior: 'smooth' 
+});
+}
+
+function findPos(obj) {
+    var curtop = 0;
+    if (obj.offsetParent) {
+        do {
+            curtop += obj.offsetTop;
+        } while (obj = obj.offsetParent);
+    return [curtop + -100];
+    }
+}
+
+function scrollWin(x, y) {
+    window.scrollBy(x, y);
+}
+
+window.scroll({
+  behavior: "smooth"
+});
+
+</script>
+
+<footer id="footer">
+<script>
+date = new Date()
+year = date.getFullYear()
+document.getElementById("footer").innerHTML = '© Copyright Timothy Harris | <a href="legal.html">legal information</a>'
+</script>
+</footer>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html onload="ifmobile()" lang="en-us">
+
+<head>
+<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+<link rel="stylesheet" href="../css/mobile.css">
+</head>
+
+<ul>
+  <li><a onmouseover="document.body.style.cursor = 'pointer'" onmouseout="document.body.style.cursor = 'default'" onclick="ScrollTo(document.getElementById('home'))">Home</a></li>
+  <li><a onmouseover="document.body.style.cursor = 'pointer'" onmouseout="document.body.style.cursor = 'default'" onclick="ScrollTo(document.getElementById('1'))">Poll</a></li>
+  <li><a onmouseover="document.body.style.cursor = 'pointer'" onmouseout="document.body.style.cursor = 'default'" onclick="ScrollTo(document.getElementById('2'))">2</a></li>
+  <li><a onmouseover="document.body.style.cursor = 'pointer'" onmouseout="document.body.style.cursor = 'default'" onclick="ScrollTo(document.getElementById('3'))">3</a></li>
+</ul>
+
+<div id="home" class="home">
+<h1>
+</h1>
+</div>
+
+<div id="1" class="white" onselectstart="return false">
+    <br/><br/>
+    <h1>Poll Title</h1>
+    <div class="row">
+    <div class="poll">
+    <div class="option"><box onmouseover="document.body.style.cursor = 'pointer'" onmouseout="document.body.style.cursor = 'default'">Option 1</box></div>
+    </div>
+    <div class="poll">
+    <div class="option"><box onmouseover="document.body.style.cursor = 'pointer'" onmouseout="document.body.style.cursor = 'default'">Option 2</box></div>
+    </div>
+    </div>
+    
+</div>
+<div id="2" class="grey">
+    <br/><br/>
+    <h1>Section 2</h1>
+    <h3>Proin egestas pellentesque nisi, in tristique velit lobortis sed. Mauris porttitor dolor et elementum imperdiet. Pellentesque vel molestie tellus. Phasellus semper lacinia arcu sed viverra. Vestibulum vitae varius odio. In vitae dui vel magna egestas efficitur et vel ante. Vestibulum vel nibh vulputate, elementum risus eu, consectetur tortor. Aliquam quam ante, accumsan eget viverra eu, tempor quis libero.</h3><br/>
+</div>
+<div id="3" class="white">
+    <br/><br/>
+    <h1>Section 3</h1>
+    <h3>Aenean euismod nulla risus, ac pretium tortor tincidunt id. Nam vel ante ac dui consectetur placerat. Nam porta, risus eu sagittis lacinia, velit risus sagittis metus, vitae luctus orci mauris non libero. Sed felis neque, cursus a orci id, fringilla egestas magna. Donec quis ligula erat. Sed sagittis elit sollicitudin, porttitor urna sit amet, pulvinar sem. Vestibulum aliquet iaculis tempor.</h3>
+</div>
+
+<script>
+
+
+function ifmobile() 
+    {
+        if (screen.width <= 699) {
+    document.location = "mobile.html";
+}}
+
+function ScrollTo(elemt) {
+window.scroll({
+  top: findPos(elemt), 
+  left: 0, 
+  behavior: 'smooth' 
+});
+}
+
+function findPos(obj) {
+    var curtop = 0;
+    if (obj.offsetParent) {
+        do {
+            curtop += obj.offsetTop;
+        } while (obj = obj.offsetParent);
+    return [curtop + -100];
+    }
+}
+
+function scrollWin(x, y) {
+    window.scrollBy(x, y);
+}
+
+window.scroll({
+  behavior: "smooth"
+});
+
+</script>
+
+<footer id="footer">
+<script>
+date = new Date()
+year = date.getFullYear()
+document.getElementById("footer").innerHTML = '© Copyright Timothy Harris | <a href="legal.html">legal information</a>'
+</script>
+</footer>
+</html>

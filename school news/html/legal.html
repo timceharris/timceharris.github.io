@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html onload="ifmobile()" lang="en-us">
+
+<head>
+<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+<link rel="stylesheet" href="../css/legal.css">
+<link rel="stylesheet" href="../css/cookie%20warning.css">
+</head>
+
+
+
+<div id="1" class="white" onselectstart="return false">
+    <br/><br/>
+    <h1>Website © Copyright Timothy. All rights, except where noted otherwise, reserved<br/><br/></h1>
+<h2>JS Redirection Mobile (redirection-mobile.js)</h2>
+<h3>
+Copyright (c) 2011-2012 Sebastiano Armeli-Battana (http://www.sebastianoarmelibattana.com)<br/>
+<br/>
+By Sebastiano Armeli-Battana (@sebarmeli) - http://www.sebastianoarmelibattana.com<br/>
+Licensed under the MIT license.<br/>
+https://github.com/sebarmeli/JS-Redirection-Mobile-Site/blob/master/MIT-LICENSE.txt<br/>
+<br/>
+@link http://github.com/sebarmeli/JS-Redirection-Mobile-Site<br/>
+@author Sebastiano Armeli-Battana<br/>
+@date 29/10/2012<br/>
+@version 1.0.0<br/>
+    </h3>
+</div>
+
+<script>
+
+
+function ifmobile() 
+    {while (true) {
+        if (screen.width <= 699) {
+    document.location = "mobile.html";}
+}}
+
+function ScrollTo(elemt) {
+window.scroll({
+  top: findPos(elemt), 
+  left: 0, 
+  behavior: 'smooth' 
+});
+}
+
+function findPos(obj) {
+    var curtop = 0;
+    if (obj.offsetParent) {
+        do {
+            curtop += obj.offsetTop;
+        } while (obj = obj.offsetParent);
+    return [curtop + -100];
+    }
+}
+
+function scrollWin(x, y) {
+    window.scrollBy(x, y);
+}
+
+window.scroll({
+  behavior: "smooth"
+});
+
+</script>
+
+<footer><a href="../index.html">Main page</a></footer>
+
+</html>
