@@ -1,0 +1,23 @@
+#cookies {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(96, 96, 96, 0.46);
+    z-index: 999;
+    position: fixed;
+    margin: 0;
+    }
+
+.cookies_text {
+    position: relative;
+    top: 100px
+}
+
+cookieagree {
+    position: relative;
+    top: 100px;
+}
+
+cookiego {
+    background-color: #f0f0f0;
+    border: 10px solid #f0f0f0;
+    border-radius: 25px;}
