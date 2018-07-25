@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html onload="" lang="en-us">
+<head>
+<link rel="stylesheet" href="../css/poll_clicked.css">
+</head>
 <body id="body">
-
 </body>
 <script>
 document.getElementById("body").innerHTML = ("choice=" + getParameterByName('choice'))
+if (getParameterByName('choice') == null) {
+    console.log(null)
+    window.location.assign("../index.html")
+    }
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, '\\$&');
