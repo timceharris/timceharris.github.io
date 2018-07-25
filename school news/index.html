@@ -1,24 +1,31 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html onload="ifmobile()" lang="en-us">
 
- <title>
- The Shark - The Newspaper that bites back
- </title>
- 
+<title>
+The Shark - The Newspaper That Bites Back
+</title>
+
 <head>
 <!-- Mobile redirect script by https://pagecrafter.com -->
 <script type="text/javascript" src="js/redirection-mobile.js"></script><script type="text/javascript">// <![CDATA[
  SA.redirection_mobile ({
- mobile_url : "timceharris.github.io/school%20news/html/mobile.html",
+ mobile_url : "/Users/timothy/Documents/html files/school%20news/html/mobile.html",
  });
  
 // ]]></script>
 <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 <link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/cookies.css">
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#000000">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#000000">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#000000">
 </head>
 
- <div id="cookies" style="display: inline">
+<div id="cookies" style="display: inline">
 <h1><font class="cookies_text" color="white">
     
     This Website uses cookies to enhance your experience<br/><br/>
@@ -27,7 +34,7 @@
     
     </h1>
 </div>
- 
+
 <ul>
   <li><a onmouseover="document.body.style.cursor = 'pointer'" onmouseout="document.body.style.cursor = 'default'" onclick="ScrollTo(document.getElementById('home'))">Home</a></li>
   <li><a onmouseover="document.body.style.cursor = 'pointer'" onmouseout="document.body.style.cursor = 'default'" onclick="ScrollTo(document.getElementById('1'))">Poll</a></li>
@@ -68,10 +75,27 @@
 
 <script>
 
- function cookieagree() {
-    document.getElementById("cookies").style.display = "none"
+if("cookieaccept" in localStorage){
+   document.getElementById('cookies').style.display = 'none'; 
+} else {
 }
- 
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+function ifmobile() 
+    {while (true) {
+        if (screen.width <= 699) {
+    document.location = "mobile.html";}
+}}
+
 function ScrollTo(elemt) {
 window.scroll({
   top: findPos(elemt), 
@@ -98,7 +122,42 @@ window.scroll({
   behavior: "smooth"
 });
 
-var _0xf68d=["\x63\x6F\x6F\x6B\x69\x65","\x44\x6F\x6E\x74\x63\x6F\x6D\x70\x75\x74\x65\x20\x3D\x20\x74\x72\x75\x65\x2C\x20\x65\x78\x70\x69\x72\x65\x73\x3A\x20\x31\x20\x4A\x61\x6E\x20\x32\x30\x35\x30","\x57\x65\x6C\x63\x6F\x6D\x65\x20\x62\x61\x63\x6B\x2E\x20\x49\x66\x20\x79\x6F\x75\x20\x6B\x6E\x65\x77\x20\x77\x68\x61\x74\x20\x79\x6F\x75\x20\x77\x65\x72\x65\x20\x64\x6F\x69\x6E\x67\x2C\x20\x79\x6F\x75\x20\x77\x6F\x75\x6C\x64\x6E\x27\x74\x20\x68\x61\x76\x65\x20\x74\x79\x70\x65\x64\x20\x74\x68\x69\x73\x2E\x20\x53\x6F\x20\x79\x6F\x75\x20\x6C\x69\x65\x64\x20\x61\x6E\x64\x20\x49\x27\x6D\x20\x64\x69\x73\x61\x70\x70\x6F\x69\x6E\x74\x65\x64\x2E\x20\x49\x27\x76\x65\x20\x70\x6C\x61\x6E\x74\x65\x64\x20\x61\x20\x63\x6F\x6F\x6B\x69\x65\x20\x74\x6F\x20\x72\x65\x6D\x65\x6D\x62\x65\x72\x20\x79\x6F\x75\x2E\x20\x49\x66\x20\x79\x6F\x75\x20\x77\x65\x72\x65\x6E\x27\x74\x20\x6C\x79\x69\x6E\x67\x2C\x20\x79\x6F\x75\x27\x64\x20\x6B\x6E\x6F\x77\x20\x68\x6F\x77\x20\x74\x6F\x20\x64\x65\x6C\x65\x74\x65\x20\x69\x74","\x44\x6F\x20\x79\x6F\x75\x20\x61\x67\x72\x65\x65\x20\x74\x6F\x20\x6F\x75\x72\x20\x75\x73\x65\x20\x6F\x66\x20\x63\x6F\x6F\x6B\x69\x65\x73\x20\x61\x6E\x64\x20\x61\x6C\x6C\x20\x74\x68\x61\x74\x3F\x20\x74\x79\x70\x65\x20\x79\x65\x73\x28\x29","\x48\x65\x79","\x6C\x6F\x67","\x49\x20\x73\x65\x65\x20\x79\x6F\x75\x20\x61\x72\x65\x20\x61\x20\x63\x6F\x6D\x70\x75\x74\x65\x72\x79\x20\x67\x75\x79","\x4F\x72\x20\x6D\x61\x79\x62\x65\x20\x6A\x75\x73\x74\x20\x61\x20\x67\x75\x79\x20\x77\x68\x6F\x20\x66\x6F\x75\x6E\x64\x20\x61\x20\x74\x68\x69\x6E\x67\x20\x68\x65\x20\x63\x6F\x75\x6C\x64\x20\x63\x6F\x70\x79\x20\x61\x6E\x64\x20\x70\x61\x73\x74\x65\x20\x6F\x66\x66\x20\x74\x68\x65\x20\x69\x6E\x74\x65\x72\x6E\x65\x74\x20\x61\x6E\x64\x20\x74\x68\x69\x6E\x6B\x73\x20\x68\x65\x27\x73\x20\x61\x20\x63\x6F\x6D\x70\x75\x74\x65\x72\x79\x20\x67\x75\x79","\x53\x6F\x6D\x65\x20\x61\x64\x76\x69\x63\x65","\x49\x66\x20\x74\x68\x65\x20\x6C\x61\x74\x74\x65\x72\x20\x69\x73\x20\x74\x72\x75\x65\x2C\x20\x69\x6E\x73\x74\x65\x61\x64\x20\x6F\x66\x20\x63\x6F\x70\x79\x69\x6E\x67\x20\x73\x6F\x6D\x65\x74\x68\x69\x6E\x67\x20\x77\x68\x69\x63\x68\x20\x69\x73\x20\x70\x72\x6F\x62\x61\x62\x6C\x79\x20\x66\x61\x6B\x65\x20\x69\x6E\x74\x6F\x20\x74\x68\x65\x20\x63\x6F\x6E\x73\x6F\x6C\x65\x20\x73\x6F\x20\x79\x6F\x75\x20\x63\x61\x6E\x20\x74\x68\x69\x6E\x6B\x20\x79\x6F\x75\x72\x20\x67\x6F\x6F\x64\x20\x61\x74\x20\x63\x6F\x6D\x70\x75\x74\x65\x72\x73\x2C\x20\x61\x63\x74\x75\x61\x6C\x6C\x79\x20\x6C\x65\x61\x72\x6E\x20\x63\x6F\x6D\x70\x75\x74\x65\x72\x73\x2E","\x4F\x6B\x61\x79\x2C\x20\x6F\x66\x66\x20\x79\x6F\x75\x20\x67\x6F","\x43\x6F\x6D\x65\x20\x62\x61\x63\x6B\x20\x77\x68\x65\x6E\x20\x79\x6F\x75\x20\x6B\x6E\x6F\x77\x20\x77\x68\x61\x74\x20\x79\x6F\x75\x27\x72\x65\x20\x64\x6F\x69\x6E\x67","\x20","\x41\x6C\x72\x69\x67\x68\x74\x2E\x20\x41\x72\x65\x20\x79\x6F\x75\x20\x62\x61\x63\x6B\x3F","\x4C\x65\x61\x72\x6E\x74\x20\x63\x6F\x6D\x70\x75\x74\x65\x72\x73\x20\x79\x65\x74\x3F","\x4F\x6B\x61\x79\x2C\x20\x74\x79\x70\x65\x20\x49\x6D\x62\x61\x63\x6B\x28\x29"];var Imbackcookieagreement=false;function yes(){if(Imbackcookieagreement== true){document[_0xf68d[0]]= _0xf68d[1];return _0xf68d[2]}else {return false}}function Imback(){Imbackcookieagreement= true;return (_0xf68d[3])}console[_0xf68d[5]](_0xf68d[4]);console[_0xf68d[5]](_0xf68d[6]);console[_0xf68d[5]](_0xf68d[7]);console[_0xf68d[5]](_0xf68d[8]);console[_0xf68d[5]](_0xf68d[9]);console[_0xf68d[5]](_0xf68d[10]);console[_0xf68d[5]](_0xf68d[11]);console[_0xf68d[5]](_0xf68d[12]);console[_0xf68d[5]](_0xf68d[12]);console[_0xf68d[5]](_0xf68d[12]);console[_0xf68d[5]](_0xf68d[12]);console[_0xf68d[5]](_0xf68d[12]);console[_0xf68d[5]](_0xf68d[12]);console[_0xf68d[5]](_0xf68d[13]);console[_0xf68d[5]](_0xf68d[14]);console[_0xf68d[5]](_0xf68d[15])
+function cookieagree() {
+    document.getElementById("cookies").style.display = "none";
+    localStorage.setItem("cookieaccept", "true");
+}
+
+var Imbackcookieagreement = false
+function yes() {
+    if (Imbackcookieagreement == true) {
+        document.cookie = "Dontcompute = true, expires: 1 Jan 2050"
+        return "Welcome back. If you knew what you were doing, you wouldn't have typed this. So you lied and I'm disappointed. I've planted a cookie to remember you. If you weren't lying, you'd know how to delete it"}
+    else {
+        return false
+    }
+}
+
+function Imback() {
+    Imbackcookieagreement = true
+    return("Do you agree to our use of cookies and all that? type yes()")
+}
+
+console.log("Hey")
+console.log("I see you are a computery guy")
+console.log("Or maybe just a guy who found a thing he could copy and paste off the internet and thinks he's a computery guy")
+console.log("Some advice")
+console.log("If the latter is true, instead of copying something which is probably fake into the console so you can think your good at computers, actually learn computers.")
+console.log("Okay, off you go")
+console.log("Come back when you know what you're doing")
+console.log(" ")
+console.log(" ")
+console.log(" ")
+console.log(" ")
+console.log(" ")
+console.log(" ")
+console.log("Alright. Are you back?")
+console.log("Learnt computers yet?")
+console.log("Okay, type Imback()")
 
 </script>
 
