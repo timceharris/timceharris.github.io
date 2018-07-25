@@ -1,11 +1,21 @@
-<!DOCTYPE html>
 <html onload="ifmobile()" lang="en-us">
 
 <head>
 <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 <link rel="stylesheet" href="../css/mobile.css">
+<link rel="stylesheet" href="../css/cookies.css">
 </head>
+
+<div id="cookies" style="display: inline">
+<h1><font class="cookies_text" color="white">
+    
+    This Website uses cookies to enhance your experience<br/><br/>
+    By using this service you accept the use of cookies<br/><br/></font>
+    <cookieagree><font color="white">By pressing close, you agree to the <a href="html/Cookie%20policy.html">Cookie Policy</a> and accept all cookies </font><cookiego onclick="cookieagree()" onmouseover="document.body.style.cursor = 'pointer'" onmouseout="document.body.style.cursor = 'default'">Close</cookiego></cookieagree>
+    
+    </h1>
+</div>
 
 <ul>
   <li><a onmouseover="document.body.style.cursor = 'pointer'" onmouseout="document.body.style.cursor = 'default'" onclick="ScrollTo(document.getElementById('home'))">Home</a></li>
@@ -24,10 +34,10 @@
     <h1>Poll Title</h1>
     <div class="row">
     <div class="poll">
-    <div class="option"><box onmouseover="document.body.style.cursor = 'pointer'" onmouseout="document.body.style.cursor = 'default'">Option 1</box></div>
+    <div class="option"><box onmouseover="document.body.style.cursor = 'pointer'" onmouseout="document.body.style.cursor = 'default'"  onclick='window.location.assign("poll_clicked.html?choice=1")'>Option 1</box></div>
     </div>
     <div class="poll">
-    <div class="option"><box onmouseover="document.body.style.cursor = 'pointer'" onmouseout="document.body.style.cursor = 'default'">Option 2</box></div>
+    <div class="option"><box onmouseover="document.body.style.cursor = 'pointer'" onmouseout="document.body.style.cursor = 'default'"  onclick='window.location.assign("poll_clicked.html?choice=2")'>Option 2</box></div>
     </div>
     </div>
     
@@ -45,6 +55,15 @@
 
 <script>
 
+function cookieagree() {
+    document.getElementById("cookies").style.display = "none";
+    localStorage.setItem("cookieaccept", "true");
+}
+
+if("cookieaccept" in localStorage){
+   document.getElementById('cookies').style.display = 'none'; 
+} else {
+}
 
 function ifmobile() 
     {
