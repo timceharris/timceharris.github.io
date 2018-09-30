@@ -1,0 +1,24 @@
+<html style="background-image: url(game.png); background-repeat: no-repeat">
+
+<head>
+<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+</head>
+
+<div style="width: 100%; background-color: rgba(0, 0, 0, 0.8); color: white; text-align: center; height: 100%; margin: 0; font-family: 'Merriweather', serif;">
+<contents style="position: relative; top: 40%; font-size: 20">Due to EU cookie law, to continue to game you must first agree to our Cookie Policy.
+Our cookie policy can be found <a href="cookiepolicy.html" style="color: #7272ff">here</a><br/><br/>I have read and agreed to the cookie policy <input id="checkbox" type="checkbox"> <br/> <br/> <button onclick="cookiesagreed()"> Proceed to game </button> </contents>
+</div>
+
+<script>
+
+function cookiesagreed(){
+    if (document.getElementById("checkbox").checked) {
+        window.location.assign("cookiesagreed.html")
+}
+    else {
+        alert("You have not agreed to the cookie policy")
+    }}
+
+</script>
+
+</html>
