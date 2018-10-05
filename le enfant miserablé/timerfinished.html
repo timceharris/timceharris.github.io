@@ -1,0 +1,41 @@
+<!--  © Copyright Timothy Harris
+
+The author grants permission, free of charge, for any person to distribute or adapt this file for any non-commercial use provided that appropriate credit - including a link to the original file, The title of the file, and the authors name - is given, and that it is subject to the following conditions:
+
+The adaption or distribution MUST be shared with the same licence as this file.
+
+THIS LICENCE DOES NOT GRANT YOU OWNERSHIP TO THIS FILE AND THE AUTHOR RESERVES THE RIGHT TO HAVE ANY ADAPTIONS OR DISTRIBUTIONS OF THIS FILE TAKEN DOWN. THIS LICENCE DOES NOT APPLY TO THE FILE'S ASSETS OR RESOURCES UNLESS STATED OTHERWISE. THIS LICENCE'S TERMS ALWAYS APPLY UNLESS EXPRESS PERMISSION FROM THE AUTHOR IS GIVEN. -->
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<body>
+
+<h1>STOP!!!</h1>
+<h3>Score: <score id = "score"></score></h3>
+
+<script>
+document.getElementById("score").innerHTML = localStorage.getItem("score")
+</script>
+
+</body>
+
+<style>
+
+h1 {margin-top: 2cm; margin-left: 4cm}
+h3 {margin-left: 4cm}
+html {-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;}
+body {/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,63e1f2+50,1e5799+100&0+0,0.8+0,1+26,1+73,0.82+81,0.5+89,0.21+100 */
+background: -moz-linear-gradient(left, rgba(30,87,153,0.8) 0%, rgba(66,159,199,1) 26%, rgba(99,225,242,1) 50%, rgba(67,162,201,1) 73%, rgba(56,140,187,0.82) 81%, rgba(45,118,173,0.5) 89%, rgba(30,87,153,0.21) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, rgba(30,87,153,0.8) 0%,rgba(66,159,199,1) 26%,rgba(99,225,242,1) 50%,rgba(67,162,201,1) 73%,rgba(56,140,187,0.82) 81%,rgba(45,118,173,0.5) 89%,rgba(30,87,153,0.21) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, rgba(30,87,153,0.8) 0%,rgba(66,159,199,1) 26%,rgba(99,225,242,1) 50%,rgba(67,162,201,1) 73%,rgba(56,140,187,0.82) 81%,rgba(45,118,173,0.5) 89%,rgba(30,87,153,0.21) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc1e5799', endColorstr='#361e5799',GradientType=1 ); /* IE6-9 */}
+
+</style>
+
+</html>
