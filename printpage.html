@@ -1,0 +1,19 @@
+<html lang='en-us'>
+    <style>
+        div{
+            margin-top: 60;
+            margin-right: 15%;
+            color:rgb(0, 0, 0);
+            font-family: 'Oswald', sans-serif;
+            font-size: 60;
+            text-align: center
+                }
+    </style>
+    <div id="text"></div>
+    <script>
+        url = window.location.href
+        document.getElementById("text").innerHTML = (url.split('?')[1])
+        window.print()
+    </script>
+
+</html>

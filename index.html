@@ -1,5 +1,47 @@
-<a href="hit%20the%20child%20with%20a%20hammer/index.html">Hit The Child With A Hammer</a><br/>
-<a href="hit%20the%20child%20with%20a%20hammer%20musical%20version/index.html">Hit The Child With A Hammer Musical version</a><br/>
-<a href="number%20copier.py" download> Number copier</a><br/>
-<a href="school%20news/index.html"> School News</a>
-<a href="https://timceharris.github.io/le%20enfant%20miserable%CC%81/"> L'enfant Misérable</a>
+<html lang='en-us'>
+    <script>
+        var usernames = []
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <div class="titlebox">WHAT IS YOUR INSTAGRAM USERNAME?</div>
+    <div id="input" class="inputbox" contenteditable></div>
+    <button id="submit" class="submit" onclick='usernames.push(document.getElementById("input").innerHTML); document.getElementById("input").innerHTML = ""' '>I HAVE DRUNK THE JUICE</button>
+    <button id="print" class="submit" onclick='window.location.href = "printpage.html?" + usernames''>PRINT USERNAMES</button>
+    <style>
+        .titlebox{
+            width:70%;
+            margin-left: 15%;
+            margin-right: 15%;
+            background-color: black;
+            min-height: 180;
+            margin-right: 15%;
+            color:white;
+            font-family: 'Oswald', sans-serif;
+            font-size: 60;
+            text-align: center
+        }
+        .inputbox{
+            width:70%;
+            margin-left: 15%;
+            margin-right: 15%;
+            background-color: lightgrey;
+            min-height: 100;
+            margin-right: 15%;
+            color:rgb(102, 102, 102);
+            font-family: 'Oswald', sans-serif;
+            font-size: 60;
+            text-align: center
+        }
+        .submit{
+            cursor:pointer;
+            margin-left:40%;
+            margin-right: 40%;
+            margin-top: 60;
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+            font-size: 40;
+            color:rgb(102, 102, 102);
+            background-color: lightgrey;
+        }
+    </style>
+</html>
