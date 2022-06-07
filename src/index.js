@@ -1,18 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Layout from './Routes/Layout';
 import IndexCSS from './index.css'
 
 const App = (
 
     <div className='h-full w-full bg-bag'>
-        <BrowserRouter>
+
+      fdh
+        <HashRouter>
       <Routes>
       <Route path="/" element={<Layout />}/>
       </Routes>
 
-      </BrowserRouter>
+      </HashRouter>
 
       </div>
 )
