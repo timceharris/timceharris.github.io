@@ -9,12 +9,12 @@ const App = (
     <div className='h-full w-full bg-bag'>
 
       fdh
-        <HashRouter>
+        <BrowserRouter>
       <Routes>
       <Route path="/" element={<Layout />}/>
       </Routes>
 
-      </HashRouter>
+      </BrowserRouter>
 
       </div>
 )
